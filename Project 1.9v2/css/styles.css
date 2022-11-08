@@ -1,0 +1,294 @@
+/*Colors used
+
+Background Color (LavendarBlush): #FFF0F5
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+*/
+
+/*makes all elements include border and padding in the sizing*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff0f5;
+  }
+  
+  body {
+    color: #2b2b2b;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+  
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --darkgrey: #2b2b2b;
+  --button: #e0b354;
+  --white: #fff;
+ }
+ /*Main Begin*/
+
+/* Header Begin*/
+
+a {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+
+}
+a:visited {
+  /* visited link */
+  color: var(--darkgrey);
+  background-color:#f9f1e0;
+}
+
+a:hover, a:focus {
+  color: #D035A1;
+  text-decoration: none;
+}
+
+a:active {
+  /* selected link */
+  background-color:#f9f1e0;
+}
+
+.page-header {
+  display:flex;
+  width: 100%;
+  padding: 20px;
+}
+.page-header__item {
+  flex: 0 1 200px;
+}
+.page-header__item {
+  flex: 0 1 200px;
+}
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+
+/* Header End*/
+
+/*Index Main Begin*/
+
+.index {
+  margin-left: 40px
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+button {
+  /* overwrites browser defaults and resets the border */
+
+  border: none;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+button:hover, button:focus {
+  cursor: pointer;
+  background-color: #ff17e4;
+  opacity: 0.8;
+}
+
+.button__secondary {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: #2b2b2b;
+  opacity: 0.8;
+}
+
+/*makes profile picture have text on the right, sets the size and turns into a circle*/
+.profile_portrait {
+  float:left;
+  width: 250px;
+  height: auto;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+.marcus {
+  margin-right: 40px;
+  border-radius: 50%;
+}
+.h1 {
+  float: right;
+}
+.p {
+  float:right;
+}
+
+.a {
+  float: right;
+}
+
+
+a {
+  color: var(--primary-color);
+}
+
+.profile {
+  border-style: solid;
+  box-sizing: border-box;
+  min-height: 250px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.profile__text {
+  flex: 1 1 100px;
+}
+
+
+.navigation-list {
+  list-style: none;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/*Index Main End*/
+
+/*FOOTER Begin*/
+
+.page-footer {
+  clear: both;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+
+
+/*Work Begin*/
+
+.work {
+  margin-left: 40px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
+}
+
+.grid__item {
+  width: auto;
+  min-height: auto;
+  margin: 10px;
+  background-color:var(--secondary-color);
+  border-style: solid;
+}
+
+.grid__item:last-child {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+/*Work End*/
+
+/*Contact Begin*/
+.Contact {
+  margin-left: 40px;
+}
+@media all and (max-width: 500px) {
+  .grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+      grid-gap: 10px;
+  }
+/*Contact End*/
+
+
+/*About Begin*/
+.about {
+  margin-left: 40px
+}
+
+/*Shorten version........scale down for mobile screens*/
+
+
+/*ABOUT Begin*/
+
+.about {
+  text-align: center }
+.about-list {
+  list-style-type: none;
+  }
+
+  @keyframes color-change {
+    0% { fill: #edc655; }
+    50% { fill: #fcffad; }
+    100% { fill: #f76414; } }
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes sun {
+  from {
+    fill: #edc655;
+  }
+  to {
+    fill: #f76414;
+  }
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+  }
+  .cloud-back {
+    animation: 50s cloud-move-reverse infinite alternate linear;
+  }
+}
+
+/*ABOUT End*/
